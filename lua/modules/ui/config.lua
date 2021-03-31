@@ -8,9 +8,11 @@ function config.nvim_bufferline()
   require('bufferline').setup{
     options = {
       modified_icon = '✥',
-      buffer_close_icon = '',
+      buffer_close_icon = '',
       mappings = true,
-      always_show_bufferline = false,
+      numbers = "buffer_id",
+      always_show_bufferline = true,
+      show_buffer_close_icons=true
     }
   }
 end
