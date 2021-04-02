@@ -73,6 +73,14 @@ function config.nvim_tree()
      renamed =  "≫",
      untracked = "★",
     },
+  vim.g.nvim_tree_bindings={
+    ["o"] = tree_cb("edit"),
+    ["<CR>"] = tree_cb("edit"),
+    ["<C-]>"] = tree_cb("cd"),
+    ["c"] = tree_cb("copy"),
+    ["p"] = tree_cb("paste"),
+    ["<Tab>"] = tree_cb("preview"),
+    } 
   }
 end
 
