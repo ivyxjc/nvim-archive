@@ -50,6 +50,7 @@ local enhance_attach = function(client,bufnr)
 end
 
 lspconfig.gopls.setup {
+
   cmd = {"gopls","--remote=auto"},
   on_attach = enhance_attach,
   capabilities = capabilities,
@@ -57,6 +58,12 @@ lspconfig.gopls.setup {
     usePlaceholders=true,
     completeUnimported=true,
   }
+}
+
+lspconfig.clojure_lsp.setup{
+  cmd = {"clojure-lsp"},
+  --filetypes = {"clojure","edn","clj"},
+  --root_dir = root_pattern( "project.clj","deps.edn",".git")
 }
 
 lspconfig.sumneko_lua.setup {
