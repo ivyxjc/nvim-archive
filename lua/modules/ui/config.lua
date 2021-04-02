@@ -62,6 +62,13 @@ function config.nvim_tree()
     ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
     ["s"] = ":lua require'nvim-tree'.on_keypress('vsplit')<CR>",
     ["i"] = ":lua require'nvim-tree'.on_keypress('split')<CR>",
+    ["o"] = tree_cb("edit"),
+    ["<CR>"] = tree_cb("edit"),
+    ["<C-]>"] = tree_cb("cd"),
+    ["c"] = tree_cb("copy"),
+    ["p"] = tree_cb("paste"),
+    ["<Tab>"] = tree_cb("preview"),
+    }
   }
   vim.g.nvim_tree_icons = {
     default =  '',
@@ -72,16 +79,7 @@ function config.nvim_tree()
      unmerged =  "≠",
      renamed =  "≫",
      untracked = "★",
-    },
-  vim.g.nvim_tree_bindings={
-    ["o"] = tree_cb("edit"),
-    ["<CR>"] = tree_cb("edit"),
-    ["<C-]>"] = tree_cb("cd"),
-    ["c"] = tree_cb("copy"),
-    ["p"] = tree_cb("paste"),
-    ["<Tab>"] = tree_cb("preview"),
-    } 
-  }
+    }, 
 end
 
 function config._gitsigns()

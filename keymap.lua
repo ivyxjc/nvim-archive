@@ -9,7 +9,7 @@ vim.api.nvim_set_keymap('n','<leader>vh',":sp<CR>", {noremap = true,silent = tru
 
 vim.api.nvim_set_keymap('','<C-s>',':w<CR>' ,{noremap = true, silent = true})
 vim.api.nvim_set_keymap('n','<C-a>','ggVG' ,{noremap = true, silent = true})
-vim.api.nvim_set_keymap('v','<C-c>','"*y' ,{noremap = true, silent = true})
+vim.api.nvim_set_keymap('v','<C-c>','"+y' ,{noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('n','<leader>fm',':Move ',{noremap=true,silent=true})
 
