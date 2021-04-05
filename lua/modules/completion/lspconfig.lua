@@ -49,12 +49,13 @@ local enhance_attach = function(client,bufnr)
   local opts={noremap=true,silent=true}
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>',opts)
-  api.nvim_buf_set_keymap(0,'n','<A-b>','<cmd>lua vim.lsp.buf.definition()<CR>',opts)
-  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.hover()<CR>',opts)
-  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.implementation()<CR>',opts)
-  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.signature_help()<CR>',opts)
-
+  api.nvim_buf_set_keymap(0,'n','<m-d>','<cmd>lua vim.lsp.buf.declaration()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','<m-b>','<cmd>lua vim.lsp.buf.definition()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','<m-h>','<cmd>lua vim.lsp.buf.hover()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','<m-i>','<cmd>lua vim.lsp.buf.implementation()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'i','<c-p>','<cmd>lua vim.lsp.buf.signature_help()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'i','<leader>rn','<cmd>lua vim.lsp.buf.rename()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'i','<m-u>','<cmd>lua vim.lsp.buf.references()<CR>',opts)
 
 end
 
