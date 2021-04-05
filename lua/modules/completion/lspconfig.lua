@@ -46,7 +46,16 @@ local enhance_attach = function(client,bufnr)
   if client.resolved_capabilities.document_formatting then
     format.lsp_before_save()
   end
+  local opts={noremap=true,silent=true}
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','<A-b>','<cmd>lua vim.lsp.buf.definition()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.hover()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.implementation()<CR>',opts)
+  api.nvim_buf_set_keymap(0,'n','gD','<cmd>lua vim.lsp.buf.signature_help()<CR>',opts)
+
+
 end
 
 lspconfig.gopls.setup {
