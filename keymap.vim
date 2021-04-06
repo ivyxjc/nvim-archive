@@ -2,7 +2,7 @@ let mapleader=' '
 
 
 "nvim tree config
-"noremap <leader>tt :NvimTreeToggle<CR>
+noremap <leader>tt :NvimTreeToggle<CR>
 
 "windows split
 nnoremap <silent> <leader>vv :vsp<CR>
