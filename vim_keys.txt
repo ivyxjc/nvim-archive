@@ -1,0 +1,93 @@
+
+
+
+n  <CR>        *@:call <SNR>32_call_line_function()<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard.vim line 157
+   <Space>ap   * <C-O>
+	Last set from ~/.config/nvim/init.vim line 9
+   <Space>tp   * <C-O>
+	Last set from ~/.config/nvim/init.vim line 8
+   <Space>hp   * <C-O>
+	Last set from ~/.config/nvim/init.vim line 7
+o  %             <Plug>(MatchitOperationForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 60
+x  %             <Plug>(MatchitVisualForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 58
+n  %             <Plug>(MatchitNormalForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 56
+o  [%            <Plug>(MatchitOperationMultiBackward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 75
+x  [%            <Plug>(MatchitVisualMultiBackward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 73
+n  [%            <Plug>(MatchitNormalMultiBackward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 71
+n  \9          * :lua require"bufferline".go_to_buffer(9)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \8          * :lua require"bufferline".go_to_buffer(8)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \7          * :lua require"bufferline".go_to_buffer(7)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \6          * :lua require"bufferline".go_to_buffer(6)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \5          * :lua require"bufferline".go_to_buffer(5)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \4          * :lua require"bufferline".go_to_buffer(4)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \3          * :lua require"bufferline".go_to_buffer(3)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \2          * :lua require"bufferline".go_to_buffer(2)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  \1          * :lua require"bufferline".go_to_buffer(1)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+o  ]%            <Plug>(MatchitOperationMultiForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 76
+x  ]%            <Plug>(MatchitVisualMultiForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 74
+n  ]%            <Plug>(MatchitNormalMultiForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 72
+x  a%            <Plug>(MatchitVisualTextObject)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 80
+v  gx            <Plug>NetrwBrowseXVis
+	Last set from /usr/share/nvim/runtime/plugin/netrwPlugin.vim line 88
+n  gx            <Plug>NetrwBrowseX
+	Last set from /usr/share/nvim/runtime/plugin/netrwPlugin.vim line 82
+o  g%            <Plug>(MatchitOperationBackward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 61
+x  g%            <Plug>(MatchitVisualBackward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 59
+n  g%            <Plug>(MatchitNormalBackward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 57
+x  p           * <Cmd>lua require("packer.load")({'vim-operator-replace'}, { keys = "p", prefix = "" }, _G.packer_plugins)<CR>
+	Last set from ~/.config/nvim/init.vim line 1
+n  <Plug>PlenaryTestFile * :lua require('plenary.test_harness').test_directory(vim.fn.expand("%:p"))<CR>
+	Last set from ~/.local/share/nvim/site/pack/packer/opt/plenary.nvim/plugin/plenary.vim line 12
+v  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+	Last set from /usr/share/nvim/runtime/plugin/netrwPlugin.vim line 90
+n  <Plug>NetrwBrowseX * :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))<CR>
+	Last set from /usr/share/nvim/runtime/plugin/netrwPlugin.vim line 84
+v  <Plug>(MatchitVisualTextObject)   <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 79
+o  <Plug>(MatchitOperationMultiForward) * :<C-U>call matchit#MultiMatch("W",  "o")<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 69
+o  <Plug>(MatchitOperationMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "o")<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 68
+v  <Plug>(MatchitVisualMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 67
+v  <Plug>(MatchitVisualMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 66
+n  <Plug>(MatchitNormalMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 65
+n  <Plug>(MatchitNormalMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 64
+o  <Plug>(MatchitOperationBackward) * :<C-U>call matchit#Match_wrapper('',0,'o')<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 54
+o  <Plug>(MatchitOperationForward) * :<C-U>call matchit#Match_wrapper('',1,'o')<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 53
+v  <Plug>(MatchitVisualBackward) * :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 52
+v  <Plug>(MatchitVisualForward) * :<C-U>call matchit#Match_wrapper('',1,'v')<CR>m'gv``
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 51
+n  <Plug>(MatchitNormalBackward) * :<C-U>call matchit#Match_wrapper('',0,'n')<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 50
+n  <Plug>(MatchitNormalForward) * :<C-U>call matchit#Match_wrapper('',1,'n')<CR>
+	Last set from /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim line 49
