@@ -52,11 +52,13 @@ function config.dashboard()
 end
 
 function config.nvim_tree()
+  local tree_cb = require'nvim-tree.config'.nvim_tree_callback
   vim.g.nvim_tree_side='left'
   vim.g.nvim_tree_width=40
   vim.g.nvim_tree_follow = 1
   vim.g.nvim_tree_auto_open = 1
   vim.g.nvim_tree_hide_dotfiles = 1
+  
   vim.g.nvim_tree_indent_markers = 1
   vim.g.nvim_tree_bindings = {
     ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
@@ -102,11 +104,11 @@ function config._gitsigns()
        ['n ]g'] = { expr = true, "&diff ? ']g' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
        ['n [g'] = { expr = true, "&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
 
-       ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-       ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-       ['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-       ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-       ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line()<CR>',
+       --['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
+       --['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
+       --['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
+       --['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+       --['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line()<CR>',
 
        -- Text objects
        ['o ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>',
