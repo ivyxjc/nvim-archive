@@ -40,4 +40,12 @@ ui['kyazdani42/nvim-tree.lua'] = {
     requires = {'kyazdani42/nvim-web-devicons'}
 }
 
+ui['joshdick/onedark.vim'] = {
+    config = [[vim.cmd('colorscheme onedark')]]
+}
+
+-- ui['doums/darcula']={
+--     config = [[vim.cmd('colorscheme darcula')]]
+-- }
+
 return ui
