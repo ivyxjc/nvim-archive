@@ -68,7 +68,6 @@ function config.nvim_tree()
     ["c"] = tree_cb("copy"),
     ["p"] = tree_cb("paste"),
     ["<Tab>"] = tree_cb("preview"),
-    }
   }
   vim.g.nvim_tree_icons = {
     default =  '',
@@ -80,6 +79,7 @@ function config.nvim_tree()
      renamed =  "≫",
      untracked = "★",
     }, 
+  }
 end
 
 function config._gitsigns()
