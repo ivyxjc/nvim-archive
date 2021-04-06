@@ -48,4 +48,16 @@ ui['joshdick/onedark.vim'] = {
 --     config = [[vim.cmd('colorscheme darcula')]]
 -- }
 
+ui['romgrk/barbar.nvim'] = {
+    requires = {'kyazdani42/nvim-web-devicons'}
+}
+
+ui['vim-airline/vim-airline'] = {
+
+}
+
+ui['vim-airline/vim-airline-themes'] = {
+    
+}
+
 return ui
