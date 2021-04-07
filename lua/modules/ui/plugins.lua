@@ -1,39 +1,6 @@
 local ui = {}
-local config = {}
+local config = require('modules.ui.config')
 
-function config.nvim_tree()
-    local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-    vim.g.nvim_tree_side = 'left'
-    vim.g.nvim_tree_width = 30
-    vim.g.nvim_tree_follow = 1
-    vim.g.nvim_tree_auto_open = 1
-    vim.g.nvim_tree_hide_dotfiles = 0
-    vim.g.nvim_tree_git_hl = 1
-
-    vim.g.nvim_tree_indent_markers = 1
-    vim.g.nvim_tree_bindings = {
-        ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
-        ["s"] = ":lua require'nvim-tree'.on_keypress('vsplit')<CR>",
-        ["i"] = ":lua require'nvim-tree'.on_keypress('split')<CR>",
-        ["o"] = tree_cb("edit"),
-        ["<CR>"] = tree_cb("edit"),
-        ["<C-]>"] = tree_cb("cd"),
-        ["c"] = tree_cb("copy"),
-        ["p"] = tree_cb("paste"),
-        ["<Tab>"] = tree_cb("preview")
-    }
-    vim.g.nvim_tree_icons = {
-        default = '',
-        symlink = '',
-        git = {
-            unstaged = "✚",
-            staged = "✚",
-            unmerged = "≠",
-            renamed = "≫",
-            untracked = "★"
-        }
-    }
-end
 ui['kyazdani42/nvim-tree.lua'] = {
     cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
     config = config.vim_tree,
@@ -44,71 +11,16 @@ ui['joshdick/onedark.vim'] = {
     config = [[vim.cmd('colorscheme onedark')]]
 }
 
--- ui['doums/darcula']={
---     config = [[vim.cmd('colorscheme darcula')]]
--- }
-
 ui['romgrk/barbar.nvim'] = {
     requires = {'kyazdani42/nvim-web-devicons'}
 }
 
-ui['vim-airline/vim-airline'] = {}
+ui['glepnir/galaxyline.nvim'] = {
+  branch = 'main',
+  config = config.galaxyline,
+  requires = {'kyazdani42/nvim-web-devicons'}
+}
 
-ui['vim-airline/vim-airline-themes'] = {}
-
-function config._gitsigns()
-    if not packer_plugins['plenary.nvim'].loaded then
-        vim.cmd [[packadd plenary.nvim]]
-    end
-    require('gitsigns').setup {
-        signs = {
-            add = {
-                hl = 'GitGutterAdd',
-                text = '▋'
-            },
-            change = {
-                hl = 'GitGutterChange',
-                text = '▋'
-            },
-            delete = {
-                hl = 'GitGutterDelete',
-                text = '▋'
-            },
-            topdelete = {
-                hl = 'GitGutterDeleteChange',
-                text = '▔'
-            },
-            changedelete = {
-                hl = 'GitGutterChange',
-                text = '▎'
-            }
-        },
-        keymaps = {
-            -- Default keymap options
-            noremap = true,
-            buffer = true,
-
-            ['n ]g'] = {
-                expr = true,
-                "&diff ? ']g' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"
-            },
-            ['n [g'] = {
-                expr = true,
-                "&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"
-            },
-
-            -- ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-            -- ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-            -- ['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-            -- ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-            -- ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line()<CR>',
-
-            -- Text objects
-            ['o ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>',
-            ['x ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>'
-        }
-    }
-end
 ui['lewis6991/gitsigns.nvim'] = {
     config = config._gitsigns,
     requires = {'nvim-lua/plenary.nvim'}
