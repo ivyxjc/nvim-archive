@@ -1,11 +1,10 @@
 local gl = require('galaxyline')
 local colors = require('galaxyline.theme').default
 local condition = require('galaxyline.condition')
-local utils = require 'core.utils'
-local cl = require 'modules.ui.colors'
+local cl = require('modules.ui.colors')
+local icons = require('core.icons')
 
 local gls = gl.section
-local u = utils.u
 
 gl.short_line_list = {'NvimTree', 'vista', 'dbui', 'packer'}
 
@@ -49,16 +48,6 @@ local function wide_enough()
     return false
 end
 
-local icons = {
-    locker = u 'f023',
-    unsaved = u 'f693',
-    dos = u 'e70f',
-    unix = u 'f17c',
-    mac = u 'f179',
-    lsp_warn = u 'f071',
-    lsp_error = u 'f46e'
-}
-
 gls.left[1] = {
     RainbowRed = {
         provider = function()
@@ -70,12 +59,20 @@ gls.left[1] = {
 gls.left[2] = {
     ViMode = {
         provider = function()
-            local modehl = mode_hl()
-            highlight('GalaxyViMode', cl.bg, modehl, 'bold')
-            highlight('GalaxyViModeInv', modehl, cl.bg, 'bold')
-            return string.format('  %s ', mode_label())
-        end
+            return ' ' .. '  ' .. os.date('%H:%M') .. ' '
+        end,
+        highlight = {colors.background, colors.black},
+        separator = " ",
+        separator_highlight = {colors.darkBackground, colors.darkBackground}
     }
+    -- ViMode = {
+    --     provider = function()
+    --         local modehl = mode_hl()
+    --         highlight('GalaxyViMode', cl.bg, modehl, 'bold')
+    --         highlight('GalaxyViModeInv', modehl, cl.bg, 'bold')
+    --         return string.format('  %s ', mode_label())
+    --     end
+    -- }
 }
 gls.left[3] = {
     FileSize = {
@@ -138,14 +135,14 @@ gls.left[7] = {
 gls.left[8] = {
     DiagnosticError = {
         provider = 'DiagnosticError',
-        icon = '  ',
+        icon = icons.lsp_error,
         highlight = {colors.red, colors.bg}
     }
 }
 gls.left[9] = {
     DiagnosticWarn = {
         provider = 'DiagnosticWarn',
-        icon = '  ',
+        icon = icons.lsp_warn,
         highlight = {colors.yellow, colors.bg}
     }
 }
@@ -153,7 +150,7 @@ gls.left[9] = {
 gls.left[10] = {
     DiagnosticHint = {
         provider = 'DiagnosticHint',
-        icon = '  ',
+        icon = icons.lsp_hint,
         highlight = {colors.cyan, colors.bg}
     }
 }
@@ -161,7 +158,7 @@ gls.left[10] = {
 gls.left[11] = {
     DiagnosticInfo = {
         provider = 'DiagnosticInfo',
-        icon = '  ',
+        icon = icons.lsp_info,
         highlight = {colors.blue, colors.bg}
     }
 }
@@ -179,7 +176,7 @@ gls.mid[1] = {
             end
             return true
         end,
-        icon = ' LSP:',
+        icon = icons.lsp_client,
         highlight = {colors.yellow, colors.bg, 'bold'}
     }
 }
@@ -228,7 +225,7 @@ gls.right[5] = {
     DiffAdd = {
         provider = 'DiffAdd',
         condition = condition.hide_in_width,
-        icon = '  ',
+        icon = icons.diff_add,
         highlight = {colors.green, colors.bg}
     }
 }
@@ -236,7 +233,7 @@ gls.right[6] = {
     DiffModified = {
         provider = 'DiffModified',
         condition = condition.hide_in_width,
-        icon = ' ~ ',
+        icon = icons.diff_modify,
         highlight = {colors.orange, colors.bg}
     }
 }
@@ -244,7 +241,7 @@ gls.right[7] = {
     DiffRemove = {
         provider = 'DiffRemove',
         condition = condition.hide_in_width,
-        icon = '  ',
+        icon = icons.diff_delete,
         highlight = {colors.red, colors.bg}
     }
 }
