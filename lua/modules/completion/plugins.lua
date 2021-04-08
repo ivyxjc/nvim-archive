@@ -10,4 +10,14 @@ completion['glepnir/lspsaga.nvim'] = {
     cmd = 'Lspsaga'
 }
 
+completion['hrsh7th/nvim-compe'] = {
+    event = 'InsertEnter',
+    config = conf.nvim_compe
+}
+
+completion['hrsh7th/vim-vsnip'] = {
+    event = 'InsertCharPre',
+    config = conf.vim_vsnip
+}
+
 return completion
