@@ -42,8 +42,16 @@ editor['rhysd/vim-operator-surround'] = {
     requires = 'kana/vim-operator-user'
 }
 
-editor['kana/vim-niceblock'] = {
-    opt = true
+-- editor['kana/vim-niceblock'] = {
+--     opt = false
+-- }
+
+-- editor['jiangmiao/auto-pairs'] = {
+-- }
+
+editor['windwp/nvim-autopairs'] = {
+    disable_filetype = {"TelescopePrompt", "vim", "clj", "edn", "cljc"},
+    config = conf.nvim_autopairs
 }
 
 editor['tpope/vim-eunuch'] = {}

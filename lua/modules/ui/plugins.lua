@@ -16,14 +16,16 @@ ui['romgrk/barbar.nvim'] = {
 }
 
 ui['glepnir/galaxyline.nvim'] = {
-  branch = 'main',
-  config = config.galaxyline,
-  requires = {'kyazdani42/nvim-web-devicons'}
+    branch = 'main',
+    config = config.galaxyline,
+    requires = {'kyazdani42/nvim-web-devicons'}
 }
 
 ui['lewis6991/gitsigns.nvim'] = {
     config = config._gitsigns,
     requires = {'nvim-lua/plenary.nvim'}
 }
+
+ui['rhysd/accelerated-jk'] = {}
 
 return ui

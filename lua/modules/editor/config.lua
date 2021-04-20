@@ -48,4 +48,10 @@ function config.vim_cursorwod()
     vim.api.nvim_command('augroup END')
 end
 
+function config.nvim_autopairs()
+    require('nvim-autopairs').setup{
+        disable_filetype = {"TelescopePrompt", "vim"}
+    }
+end
+
 return config
